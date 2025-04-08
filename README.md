@@ -1,5 +1,26 @@
-# Data Engineering Exercise
+# Data Engineering Exercise: Solution
 
+## README for DataExtraction.ipynb
+This project features a simple data pipeline implemented in Python using a custom class called `ExtractLibrary`. The pipeline extracts book records related to **baking** from the [OpenLibrary API](https://openlibrary.org/developers/api) and stores the data locally for further use.
+
+### Functionality
+
+- Queries the OpenLibrary API for books with topics related to baking.
+- Extracts relevant fields and organizes data into:
+  - `authors` table: Contains `author_id` and `name`.
+  - `books` table: Contains `book_id`, `title`, `author_id`, and `first_publish_year`.
+- Stores the structured data in a local SQLite database: `library.db`.
+- Saves CSV backups of both tables in the `extracted_data/` folder for easy reference by reviewer.
+
+### Dependencies
+
+The project uses the following Python libraries:
+- ``requests``
+- ``sqlite3``
+- ``pandas``
+- ``time``
+
+# Data Engineering Exercise: Instructions
 ## Objective:
 Design a simplified version of a data pipeline using a real-world scenario. The exercise focuses on your ability to integrate data from an external API, process it, and present insights in a manner that's valuable for product and analytics teams.
 
